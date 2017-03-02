@@ -1,5 +1,6 @@
 #octopus > img {
 	display:block;
+	position: relative;
 	margin-left: auto;
 	margin-right: auto;
 	padding: 10em;
@@ -7,12 +8,14 @@
 
 #glasses > img {
 	display:block;
+	position: relative;
 	margin-left: 45.3%;
 	margin-top: -21.7em;
 }
 
 #hat > img {
 	display: block;
+	position: relative;
 	margin-left: 41%;
 	margin-top: -15em;
 }
