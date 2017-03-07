@@ -1,0 +1,18 @@
+Elevator algorithm
+
+- Walk forward into the elevator until you reach a wall. 
+- Turn left and walk straight along wall 
+- If you reach a button panel stop at panel.
+	- At the panel, have your hand hover over each number for 1 second and continue 	going up in floor number. Continue moving your hand over each number, until the 	human says stop.
+	- When the human says stop, press the button for the floor number the human chose.
+- Otherwise, turn left and continue walking straight.
+
+Real-life algorithm: Brushing your teeth
+- Grab your toothbrush.
+- Squeeze a pea sized amount of toothpaste on to the brush.
+- Wet the brush and place inside mouth
+- Until all 4 quadrants of your teeth have been brushed for 45 seconds:
+	- Brush teeth moving hand back and forth for 45 seconds starting from a quadrant.
+	- Choose the next quadrant by going clockwise.
+- Stop brushing!
+- Rinse mouth.
