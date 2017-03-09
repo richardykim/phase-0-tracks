@@ -55,7 +55,7 @@ end
 
 if age_test =="true" && ins_test=="true" && garlic_test=="true" && name_test=="true" && allergies_test=="true"
   puts "Probably not a vampire."
-elsif (age_test=="false" && (ins_test=="false" && garlic_test=="true")||(ins_test=="true" && garlic_test=="false") && name_test=="true") || allergies_test=="false"
+elsif age_test=="false" && (ins_test=="false" && garlic_test=="true")||(ins_test=="true" && garlic_test=="false") && name_test=="true" || (allergies_test=="false" && name_test=="true")
   puts "Probably a vampire."
 elsif age_test=="false" && ins_test=="false" && garlic_test=="false" && name_test=="true" && allergies=="done" && allergies_test=="true"
   puts "Almost certainly a vampire."
