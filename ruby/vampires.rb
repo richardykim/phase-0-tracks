@@ -1,3 +1,9 @@
+puts "How many employees will be processed?"
+employees= gets.chomp.to_i
+
+n=0 
+until n== employees
+
 puts "What is your name?"
 name= gets.chomp
 puts "How old are you?"
@@ -8,7 +14,11 @@ puts "Our company cafeteria serves garlic bread. Should we order some for you? (
 garlic= gets.chomp
 puts "Would you like to enroll in the company's health insurance? (yes or no)"
 insurance= gets.chomp
-
+puts "List all your allergies (please type done after finishing:"
+allergies ="none"
+until allergies =="done" || allergies== "sunshine"
+allergies= gets.chomp
+end
 
 current_year= 2017
 true_age= current_year - year
@@ -29,4 +39,27 @@ if garlic == "yes"
   garlic_test="true"
 else
   garlic_test="false"
-end 
+end
+
+if name == "Drake Cula" || name =="Tu Fang"
+  name_test="false"
+else
+  name_test="true"
+end
+
+if allergies== "sunshine"
+
+if age_test =="true" && ins_test=="true" && garlic_test=="true" && name_test=="true" && allergies=="done"
+  puts "Probably not a vampire."
+elsif age_test=="false" && (ins_test=="false" && garlic_test=="true")||(ins_test=="true" && garlic_test=="false") && name_test=="true"|| allergies=="sunshine"
+  puts "Probably a vampire."
+elsif age_test=="false" && ins_test=="false" && garlic_test=="false" && name_test=="true" && allergies=="done"
+  puts "Almost certainly a vampire."
+elsif name_test=="false"
+  puts "Definitely a vampire."
+else
+  puts "Results inconclusive"
+end
+n=n+1
+end
+
