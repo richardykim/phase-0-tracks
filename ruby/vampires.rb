@@ -8,3 +8,13 @@ puts "Our company cafeteria serves garlic bread. Should we order some for you? (
 garlic= gets.chomp
 puts "Would you like to enroll in the company's health insurance? (yes or no)"
 insurance= gets.chomp
+
+
+current_year= 2017
+true_age= current_year - year
+
+if age == true_age || age == true_age-1
+  age_test ="true"
+else
+  age_test="false"
+end
