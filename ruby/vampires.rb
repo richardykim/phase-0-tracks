@@ -48,14 +48,18 @@ else
 end
 
 if allergies== "sunshine"
+  allergies_test="false"
+else
+  allergies_test="true"
+end
 
-if age_test =="true" && ins_test=="true" && garlic_test=="true" && name_test=="true" && allergies=="done"
+if age_test =="true" && ins_test=="true" && garlic_test=="true" && name_test=="true" && allergies_test=="true"
   puts "Probably not a vampire."
-elsif age_test=="false" && (ins_test=="false" && garlic_test=="true")||(ins_test=="true" && garlic_test=="false") && name_test=="true"|| allergies=="sunshine"
+elsif (age_test=="false" && (ins_test=="false" && garlic_test=="true")||(ins_test=="true" && garlic_test=="false") && name_test=="true") || allergies_test=="false"
   puts "Probably a vampire."
-elsif age_test=="false" && ins_test=="false" && garlic_test=="false" && name_test=="true" && allergies=="done"
+elsif age_test=="false" && ins_test=="false" && garlic_test=="false" && name_test=="true" && allergies=="done" && allergies_test=="true"
   puts "Almost certainly a vampire."
-elsif name_test=="false"
+elsif name_test=="false" 
   puts "Definitely a vampire."
 else
   puts "Results inconclusive"
@@ -63,3 +67,4 @@ end
 n=n+1
 end
 
+puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
