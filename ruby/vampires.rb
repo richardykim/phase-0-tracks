@@ -18,3 +18,15 @@ if age == true_age || age == true_age-1
 else
   age_test="false"
 end
+
+if insurance == "yes";
+  ins_test ="true"
+else
+  ins_test= "false"
+end
+
+if garlic == "yes"
+  garlic_test="true"
+else
+  garlic_test="false"
+end
