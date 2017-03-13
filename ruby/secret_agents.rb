@@ -4,7 +4,7 @@ def encrypt(str)
     str[index] = str[index].next
     index += 1
   end
-  str
+  p str
 end
 
 def decrypt(str)
@@ -16,8 +16,12 @@ def decrypt(str)
     str[index]=alpha[place-1]
     index += 1
   end
-  str
+  p str
 end
 
+encrypt("abc")
+encrypt("zed")
+decrypt("bcd")
+decrypt("afe")
 
 encrypt(decrypt("swordfish"))
