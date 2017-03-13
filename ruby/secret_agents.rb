@@ -1,3 +1,5 @@
+# Methods Declarations
+
 def encrypt(str)
  index = 0
   while index < str.length
@@ -19,11 +21,18 @@ def decrypt(str)
   p str
 end
 
-encrypt("abc")
-encrypt("zed")
-decrypt("bcd")
-decrypt("afe")
+#encrypt("abc")
+# encrypt("zed")
+# decrypt("bcd")
+# decrypt("afe")
 
-decrypt(encrypt("swordfish"))
+# decrypt(encrypt("swordfish"))
 # This nested method works because it takes the string result of the
 #first method and inputs it into the next method.
+
+
+#Driver Code
+puts "Would you like to decrypt or encrypt a password?"
+choice = gets.chomp
+puts "What is your password?"
+password = gets.chomp
