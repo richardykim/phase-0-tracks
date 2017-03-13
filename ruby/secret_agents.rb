@@ -5,13 +5,17 @@
 # and outputs the next letter in the alphabet
 
 def encrypt(str)
- index = 0
+  alpha="abcdefghijklmnopqrstuvwxyza"
+  index=0
   while index < str.length
-    str[index] = str[index].next
+    letter= str[index]
+    place ="abcdefghijklmnopqrstuvwxyz".index(letter)
+    str[index]=alpha[place+1]
     index += 1
   end
   p str
 end
+
 
 # I will make a method that takes a string and add the alphabet as a string
 # inside the method. I will take the length and starting with the first letter
