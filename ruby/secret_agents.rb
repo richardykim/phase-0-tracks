@@ -32,15 +32,20 @@ end
 
 
 #Driver Code
-puts "Would you like to decrypt or encrypt a password?"
-choice = gets.chomp
-puts "What is your password?"
-password = gets.chomp
+repeat =nil
+until repeat == "no"
+	puts "Would you like to decrypt or encrypt a password?"
+	choice = gets.chomp
+	puts "What is your password?"
+	password = gets.chomp
 
-if choice == "encrypt"
-	encrypt(password)
-elsif choice== "decrypt"
-	decrypt(password)
-else
-	puts "Unable to carry out command"
+	if choice == "encrypt"
+		encrypt(password)
+	elsif choice== "decrypt"
+		decrypt(password)
+	else
+		puts "Unable to carry out command"
+	end
+	puts "Would you like to repeat? (yes or no)"
+	repeat =gets.chomp 
 end
