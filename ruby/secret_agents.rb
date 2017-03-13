@@ -18,3 +18,6 @@ def decrypt(str)
   end
   str
 end
+
+
+encrypt(decrypt("swordfish"))
