@@ -36,3 +36,11 @@ puts "Would you like to decrypt or encrypt a password?"
 choice = gets.chomp
 puts "What is your password?"
 password = gets.chomp
+
+if choice == "encrypt"
+	encrypt(password)
+elsif choice== "decrypt"
+	decrypt(password)
+else
+	puts "Unable to carry out command"
+end
