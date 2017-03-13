@@ -24,4 +24,6 @@ encrypt("zed")
 decrypt("bcd")
 decrypt("afe")
 
-encrypt(decrypt("swordfish"))
+decrypt(encrypt("swordfish"))
+# This nested method works because it takes the string result of the
+#first method and inputs it into the next method.
