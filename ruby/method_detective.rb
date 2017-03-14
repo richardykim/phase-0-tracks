@@ -16,10 +16,10 @@
 "Stop! You’re under arrest!".upcase
 # => "STOP! YOU’RE UNDER ARREST!"
 
-# "the usual".<???>
+"the usual".gsub!(/$/, ' suspects')
 #=> "the usual suspects"
 
-# " suspects".<???>
+" suspects".gsub!(/ /, 'the usual ');
 # => "the usual suspects"
 
 "The case of the disappearing last letter".chop
