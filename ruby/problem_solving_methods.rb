@@ -17,5 +17,13 @@ def search_array(arr,num)
 end
 
 
-search_array(array,5)
-
+def fib(num)
+  array_fib = [0,1]
+  count = 1
+  while count < num
+    prev_num = array_fib[count] + array_fib[count - 1]
+    array_fib.push(prev_num)
+    count += 1
+  end
+  return array_fib.slice(0...-1)
+end
