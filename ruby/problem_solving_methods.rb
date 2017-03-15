@@ -1,12 +1,21 @@
-arr= [5,10,15,20,25,30]
+array= [5,10,15,20,25,30]
 
-def search_array(arr, num)
-	count = 0
-	while < arr.length
-		if arr[count] == num
-			puts num
-		else
-			puts "nil"
+
+def search_array(arr,num)
+  found = false
+  count = 0
+  arr.each do |number|
+    if number == num
+      found = true
+		  return count
 		end
-	end	
+		count += 1
+  end
+  if found = false 
+	  puts "nil"
+	end
 end
+
+
+search_array(array,5)
+
