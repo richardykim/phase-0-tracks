@@ -50,3 +50,8 @@ restaurant_menu = {
   }
   
 }
+
+
+restaurant_menu[:breakfast][:meals]
+p restaurant_menu[:dinner][:beer_selection]
+restaurant_menu[:lunch][:drinks]
