@@ -2,12 +2,15 @@
 # I will take their names and swap the first and the last
 # I will then take the vowels of the names and move them over to the next vowel
 
-answer=""
+answer= ""
+name_storage = []
 until answer == "quit"
   puts "What is your first name?"
   first_name = gets.chomp
   puts "What is your last name?"
   last_name = gets.chomp
+  real_name = first_name + " " + last_name
+
   
   def spy_name(first_name,last_name)
     reverse_name = (last_name + " " + first_name).downcase
@@ -27,13 +30,18 @@ until answer == "quit"
         char
       end
     end
-    full_spyname = str_new.join
-    
+    spyname = str_new.join
+    full_spyname = spyname.split.map { |word| word.capitalize }.join(" ")
   end
   
-  puts spy_name(first_name,last_name)
+  p real_name
+  p full_spyname = spy_name(first_name,last_name)
   
   puts "Would you like to try again? (type 'yes' to continue and 'quit' to stop)"
   answer = gets.chomp
-
+  name_storage.push("#{real_name} is actually #{full_spyname}")
 end
+
+ puts name_storage
+
+
