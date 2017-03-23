@@ -94,3 +94,10 @@ add_item(my_list, "Onions")
 add_item(my_list, "Ice Cream", 4)
 puts my_list
 
+remove_item(my_list, "Lemonade")
+puts my_list
+
+update_quantity(my_list, "Ice Cream", 1)
+puts my_list
+
+print_list(my_list)
