@@ -77,13 +77,20 @@ my_list = create_list("carrots apples cereal pizza")
 puts my_list
 
 
-p add_item(my_list, "pickles")
+# p add_item(my_list, "pickles")
+# puts my_list
+
+# p remove_item(my_list, "carrots")
+# puts my_list
+
+# p update_quantity(my_list, "pizza", 3)
+# puts my_list
+
+# print_list(my_list)
+
+add_item(my_list, "Lemonade", 2)
+add_item(my_list, "Tomatoes", 3)
+add_item(my_list, "Onions")
+add_item(my_list, "Ice Cream", 4)
 puts my_list
 
-p remove_item(my_list, "carrots")
-puts my_list
-
-p update_quantity(my_list, "pizza", 3)
-puts my_list
-
-print_list(my_list)
