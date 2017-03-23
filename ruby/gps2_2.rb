@@ -101,3 +101,24 @@ update_quantity(my_list, "Ice Cream", 1)
 puts my_list
 
 print_list(my_list)
+
+
+
+
+# REFLECTION
+
+# This challenge really opened my perspective on the need for specific pseudocoding. Our guide explained that when many people are working on the same project, many times pseudocodes would help clarify what everyone's aims would be. 
+
+# Using a Hash was helpful for this challenge because we dealt with items and their quantities. Arrays would have been more useful if we only were to deal with one or the other. 
+
+# A method returns the last line of the method, unless if it is specifically told to return something else. 
+
+# You are able to pass variables through methods as arguments. 
+
+# To pass information between methods, you can call the same variables through them by putting it into their arguments.
+
+# This gps session helped clarify the importance of pseudocoding, the difference in p, puts, and prints, and it was generally a good review. 
+
+
+
+
