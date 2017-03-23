@@ -50,11 +50,25 @@ end
 	# We can find the item in the list and change the quantity of that item 
 # output: hash with item quantity changed
 
+def update_quantity(list, item_name, quantity)
+	list[item_name] = quantity.to_i
+	list
+end
+
+
 # Method to print a list and make it look pretty
 # input: list
 # steps: 
 	# print each key and value together in separate lines
 # output: hash of current version of list
+
+
+def print_list(list)
+	list.each do |item, quantity|
+		puts "We need #{quantity} #{item}"
+	end
+end
+
 
 
 ## DRIVER CODE
@@ -68,3 +82,8 @@ puts my_list
 
 p remove_item(my_list, "carrots")
 puts my_list
+
+p update_quantity(my_list, "pizza", 3)
+puts my_list
+
+print_list(my_list)
