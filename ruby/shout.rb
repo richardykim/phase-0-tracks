@@ -6,12 +6,17 @@
 ## It will return a new string
 
 module Shout
-  def self.yell_angrily(words)
-    puts words + "!!!" + " :("
+  def yell(words)
+    puts words + "!!!"
   end
-  def self.yelling_happily(words)
-  	puts words + "!!!" + ":)"
-  end
+end
+
+class Happy
+	include Shout
+end
+
+class Angry
+	include Shout
 end
 
 
