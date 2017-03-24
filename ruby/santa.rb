@@ -13,6 +13,10 @@ class Santa
  		new_age = age.to_i + 1
  		puts "Santa is now #{new_age}"
  	end
+ 	def random_age
+ 		age = rand(1..140)
+ 	end
+
  	def get_mad_at(reindeer)	
 		reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
 		new_reindeer_ranking = reindeer_ranking.insert(8, reindeer_ranking.delete_at(reindeer_ranking.index(reindeer)))
@@ -37,9 +41,10 @@ end
 santas = []
 example_genders = ["male", "female", "bigender", "male in the morning, female at night", "3/4 female, 1/4 male", "gender fluid", "agender", "anongender", "earthgender", "N/A"]
 example_ethnicities = ["black", "mongols", "Native Hawaiians", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
-1.times do 
+00.times do 
   santas << Santa.new(example_genders.sample, example_ethnicities.sample)
 end
 
+puts age
 
 
