@@ -27,20 +27,19 @@ end
 
 ## DRIVER CODE
 
-santa = Santa.new("Male", "White")
-santa.get_mad_at("Dasher")
-
+# santa = Santa.new("Male", "White")
+# santa.get_mad_at("Dasher")
 # santa.celebrate_birthday
 # santa.speak("hello")
 # santa.eat_milk_and_cookies("chocolate-chip")
 
 
-# santas = []
-# example_genders = ["male", "female", "bigender", "male in the morning, femaile at night", "3/4 female, 1/4 male", "gender fluid", "N/A"]
-# example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
-# example_genders.length.times do |i|
-#   santas << Santa.new(example_genders[i], example_ethnicities[i])
-# end
+santas = []
+example_genders = ["male", "female", "bigender", "male in the morning, female at night", "3/4 female, 1/4 male", "gender fluid", "agender", "anongender", "earthgender", "N/A"]
+example_ethnicities = ["black", "mongols", "Native Hawaiians", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+1.times do 
+  santas << Santa.new(example_genders.sample, example_ethnicities.sample)
+end
 
 
 
