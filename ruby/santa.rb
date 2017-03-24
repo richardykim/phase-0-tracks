@@ -13,8 +13,8 @@ class Santa
  		new_age = age.to_i + 1
  		puts "Santa is now #{new_age}"
  	end
- 	def random_age()
- 		age = rand(140)
+ 	def random_age
+ 		age = rand(1..140)
  		puts age
  	end
  	def get_mad_at(reindeer)	
@@ -25,7 +25,7 @@ class Santa
 	def initialize(gender, ethnicity)
 		@gender = gender
 		@ethnicity = ethnicity
-		puts "Initializing Santa instance #{gender}, #{ethnicity} #{age}"
+		puts "Initializing Santa instance #{gender}, #{ethnicity}, age:"
 	end
 end
 
@@ -38,11 +38,20 @@ end
 # santa.eat_milk_and_cookies("chocolate-chip")
 
 
-santas = []
+# santas = []
+# example_genders = ["male", "female", "bigender", "male in the morning, female at night", "3/4 female, 1/4 male", "gender fluid", "agender", "anongender", "earthgender", "N/A"]
+# example_ethnicities = ["black", "mongols", "Native Hawaiians", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+# possible_age = [age]
+# 10.times do 
+#   santas << Santa.new(example_genders.sample, example_ethnicities.sample, possible_age.sample)
+# end
+
+
+
 example_genders = ["male", "female", "bigender", "male in the morning, female at night", "3/4 female, 1/4 male", "gender fluid", "agender", "anongender", "earthgender", "N/A"]
 example_ethnicities = ["black", "mongols", "Native Hawaiians", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
 10.times do 
-  santas << Santa.new(example_genders.sample, example_ethnicities.sample)
+  santas = Santa.new(example_genders.sample, example_ethnicities.sample)
+  santas.random_age
 end
 
-santas.random_age
