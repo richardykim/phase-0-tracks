@@ -11,15 +11,19 @@ module Shout
   end
 end
 
-class Happy
+class Announcer
 	include Shout
 end
 
-class Angry
+class Baby
 	include Shout
 end
 
 
+## DRIVER CODE
 
-Shout.yell_angrily("Hello")
-Shout.yelling_happily("Hello")
+baby = Baby.new
+baby.yell("Waaahh")
+
+announcer = Announcer.new
+announcer.yell("Goooooooood Mooorning Vietnam")
