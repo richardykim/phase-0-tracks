@@ -11,5 +11,12 @@ function reverse(word){
 	return revWord
 }
 
+var reverseMethod = reverse("hello")
+var sky = "blue"
 
-console.log(reverse("hello"));
+
+if (sky == "blue"){
+	console.log(reverseMethod);
+} else {
+	console.log("Sorry!")
+}
