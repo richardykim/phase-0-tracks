@@ -1,11 +1,11 @@
 # Virus Predictor
 
-# I worked on this challenge [by myself, with: ].
-# We spent [#] hours on this challenge.
+# I worked on this challenge [by myself, with: John-Michael].
+# We spent [2] hours on this challenge.
 
 # EXPLANATION OF require_relative
-#
-#
+# requre_relative allows us to to load a file that is relative to this file
+
 require_relative 'state_data'
 
 class VirusPredictor
@@ -32,20 +32,20 @@ class VirusPredictor
 # Based on population density, this method will predict how many deaths there will be
 
   def predicted_deaths
-    # predicted deaths is solely based on population density
-    if @population_density >= 200
-      number_of_deaths = (@population * 0.4).floor
-    elsif @population_density >= 150
-      number_of_deaths = (@population * 0.3).floor
-    elsif @population_density >= 100
-      number_of_deaths = (@population * 0.2).floor
-    elsif @population_density >= 50
-      number_of_deaths = (@population * 0.1).floor
-    else
-      number_of_deaths = (@population * 0.05).floor
-    end
-
-    print "#{@state} will lose #{number_of_deaths} people in this outbreak"
+     # predicted deaths is solely based on population density
+     if @population_density >= 200
+       x = 0.4
+    #  elsif @population_density >= 150
+    #    x = 0.3
+    #  elsif @population_density >= 100
+    #    x = 0.2
+     elsif @population_density >= 50
+       x = @population_density/500.floor
+     else
+       x = 0.05
+     end
+     number_of_deaths = (@population * x).floor
+     print "#{@state} will lose #{number_of_deaths} people in this outbreak"
 
   end
 
@@ -102,4 +102,17 @@ alaska.virus_effects
 #=======================================================================
 # Reflection Section
 
+# What are the differences between the two different hash syntaxes shown in the state_data file?
+# The differences between the two different hash styles shown in the state_data file is that one uses the hash rocket while the other uses colons.
 
+# What does require_relative do? How is it different from require?
+# require_relative allows us to to load a file that is relative to this file. require can use the current directory that you are running the program from
+
+# What are some ways to iterate through a hash?
+# You can iterate through a hash using the .each command through each value.
+
+# When refactoring virus_effects, what stood out to you about the variables, if anything?
+# The variables seemed very similar to the variables we see in algebra. It felt like solving a math problem.
+
+# What concept did you most solidify in this challenge?
+# I believe the concept of refactoring was made very clear and also the use of require_relative
