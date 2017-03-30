@@ -21,8 +21,8 @@ class VirusPredictor
 # The virus effects method is passing the instance variables into other methods
 
   def virus_effects
-    predicted_deaths(@population_density, @population, @state)
-    speed_of_spread(@population_density, @state)
+    predicted_deaths
+    speed_of_spread
   end
 
 # The private method protects the codes underneath 
@@ -31,7 +31,7 @@ class VirusPredictor
 
 # Based on population density, this method will predict how many deaths there will be
 
-  def predicted_deaths(population_density, population, state)
+  def predicted_deaths
     # predicted deaths is solely based on population density
     if @population_density >= 200
       number_of_deaths = (@population * 0.4).floor
@@ -51,7 +51,7 @@ class VirusPredictor
 
 # Based on population density, this method will determine how quickly the outbreak will spread
 
-  def speed_of_spread(population_density, state) #in months
+  def speed_of_spread #in months
     # We are still perfecting our formula here. The speed is also affected
     # by additional factors we haven't added into this functionality.
     speed = 0.0
@@ -94,9 +94,9 @@ alaska.virus_effects
 
 
 
-STATE_DATA.each { |state, data|
-  VirusPredictor.new(state, data[population_density], data[population]).virus_effects
-}
+# STATE_DATA.each { |state, data|
+#   VirusPredictor.new(state, data[:population_density], data[:population]).virus_effects
+# }
 
 
 #=======================================================================
