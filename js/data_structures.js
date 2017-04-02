@@ -22,10 +22,10 @@ function Car(size, color, speed) {
   this.speed = speed;
 
  //honk
-  this.honk = function() {console.log(“beep beep”);};
+  this.honk = function() {console.log("beep beep");};
 
 }
 
-var anothercar = new Car(“big”, “black”, “fast”);
+var anothercar = new Car("big", "black", "fast");
 console.log(anothercar)
-console.log(anothercar.honk)
+anothercar.honk();
