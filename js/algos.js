@@ -37,17 +37,39 @@ function Compare(object1, object2) {
 }
 
 
+// Generate Random Test Data
+
+
+function randomWordGenerator(integer){
+  var words = [];
+  for (var i = 0; i < integer; i++) {
+    var finishedWord = "";
+    var numberOfLetters = Math.floor((Math.random() * 10) + 1);
+    console.log(numberOfLetters);
+    for (var j = 0; j < numberOfLetters; j++) {
+     var code = Math.floor((Math.random() * 26) + 97);
+     var character = String.fromCharCode(code);
+     finishedWord += character;
+    }
+    words.push(finishedWord);
+  }
+  console.log(words);
+  return words;
+}
+
 
 
 
 // DRIVER CODE
 
-longestWord(list)
+longestWord(list);
 
 // console.log (list.length);
 
-longestWord(anotherList)
+longestWord(anotherList);
 
-Compare(person1, person2)
+Compare(person1, person2);
 
+
+longestWord(randomWordGenerator(10));
 
