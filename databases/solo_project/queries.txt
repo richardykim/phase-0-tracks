@@ -1,0 +1,88 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1504\cocoasubrtf810
+{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;}
+{\*\expandedcolortbl;;\csgray\c0;\csgray\c100000;}
+\margl1440\margr1440\vieww10800\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs22 \cf2 \cb3 \CocoaLigature0 1.Display the information in one table (either table is fine).\
+\
+sqlite> SELECT * FROM car_models, car_company WHERE car_models.company = car_company.id;\
+1|Civic Sedan|1972|18740|1|1|Honda\
+2|Accord Hybrid|1976|29605|1|1|Honda\
+3|Odyssey|1994|29850|1|1|Honda\
+4|Elantra|1990|17150|2|2|Hyundai\
+5|Sonata|1985|21950|2|2|Hyundai\
+6|Santa Fe Sport|2000|25350|2|2|Hyundai\
+7|Impreza|1992|18395|3|3|Subaru\
+8|Outback|1990|25645|3|3|Subaru\
+sqlite> \
+\
+\
+2. Update an item that meets some condition (you can choose a condition that makes sense). \
+\
+sqlite> UPDATE car_models SET price = 17180.00 WHERE name = "Elantra";\
+sqlite> SELECT * FROM car_models, car_company WHERE car_models.company = car_company.id;\
+1|Civic Sedan|1972|18740|1|1|Honda\
+2|Accord Hybrid|1976|29605|1|1|Honda\
+3|Odyssey|1994|29850|1|1|Honda\
+4|Elantra|1990|17180|2|2|Hyundai\
+5|Sonata|1985|21950|2|2|Hyundai\
+6|Santa Fe Sport|2000|25350|2|2|Hyundai\
+7|Impreza|1992|18395|3|3|Subaru\
+8|Outback|1990|25645|3|3|Subaru\
+sqlite> \
+\
+\
+3. Display the information in both tables using one query. \
+\
+sqlite> SELECT * FROM car_models, car_company WHERE car_models.company = car_company.id;\
+1|Civic Sedan|1972|18740|1|1|Honda\
+2|Accord Hybrid|1976|29605|1|1|Honda\
+3|Odyssey|1994|29850|1|1|Honda\
+4|Elantra|1990|17180|2|2|Hyundai\
+5|Sonata|1985|21950|2|2|Hyundai\
+6|Santa Fe Sport|2000|25350|2|2|Hyundai\
+7|Impreza|1992|18395|3|3|Subaru\
+8|Outback|1990|25645|3|3|Subaru\
+\
+4. Display a narrower selection of columns (fewer columns than all of them, in other words) from both tables using one query. \
+\
+sqlite> SELECT car_models.name, car_company.name FROM car_models, car_company WHERE car_models.company = car_company.id;\
+Civic Sedan|Honda\
+Accord Hybrid|Honda\
+Odyssey|Honda\
+Elantra|Hyundai\
+Sonata|Hyundai\
+Santa Fe Sport|Hyundai\
+Impreza|Subaru\
+Outback|Subaru\
+\
+\
+5. Delete an item that meets some condition (you can choose a condition that makes sense).\
+\
+sqlite> DELETE FROM car_models WHERE name = "Odyssey";\
+sqlite> SELECT * FROM car_models, car_company WHERE car_models.company = car_company.id;\
+1|Civic Sedan|1972|18740|1|1|Honda\
+2|Accord Hybrid|1976|29605|1|1|Honda\
+4|Elantra|1990|17180|2|2|Hyundai\
+5|Sonata|1985|21950|2|2|Hyundai\
+6|Santa Fe Sport|2000|25350|2|2|Hyundai\
+7|Impreza|1992|18395|3|3|Subaru\
+8|Outback|1990|25645|3|3|Subaru\
+\
+\
+\
+SQL INNER JOIN\
+\
+\
+sqlite> SELECT car_models.name, car_models.price, car_company.name FROM car_models INNER JOIN car_company ON car_models.company = car_company.id;\
+Civic Sedan|18740|Honda\
+Accord Hybrid|29605|Honda\
+Elantra|17180|Hyundai\
+Sonata|21950|Hyundai\
+Santa Fe Sport|25350|Hyundai\
+Impreza|18395|Subaru\
+Outback|25645|Subaru\
+sqlite> \
+}
