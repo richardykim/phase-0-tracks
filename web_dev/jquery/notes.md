@@ -1,0 +1,2 @@
+To learn more about jquery, I will first learn what jquery is and what is used for specifically. I will try to find as many examples of jquery and the benefits of using it. I will search sites that explain the different uses of jquery and give examples of things I can do using it. After learning as much as I can about it, I will practice using it on my own and attempt to implement it into my own programs. 
+
